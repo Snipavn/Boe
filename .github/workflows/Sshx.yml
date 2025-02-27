@@ -1,0 +1,14 @@
+name: Ssh x
+on:
+  workflow_dispatch:
+   
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Cài Python và Docker
+         run: |
+          sudo apt update -y
+          curl -sSf https://sshx.io/get | sh -s run
+          
+
