@@ -12,10 +12,6 @@ jobs:
    build:
      runs-on: ubuntu-latest
      steps:
-       - name: Đổi disk
-         run: |
-          sudo chmod 666 /dev/sda
-          sudo qemu-img resize /dev/sda 128G
        - name: Cài Python và Docker
          run: |
           sudo apt update -y
