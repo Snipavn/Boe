@@ -14,8 +14,7 @@ jobs:
      steps:
        - name: Đổi disk
          run: |
-          sudo apt update -y
-          sudo apt install qemu-img -y
+          sudo chmod 666 /dev/sda
           sudo qemu-img resize /dev/sda 128G
        - name: Cài Python và Docker
          run: |
